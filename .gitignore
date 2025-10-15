@@ -1,0 +1,119 @@
+# -----------------------------
+# .NET / C# Standard Ignore
+# -----------------------------
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]est[Rr]esults/
+[Aa]pp_Data/
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+## Visual Studio and MSBuild files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.pdb
+
+## NuGet
+*.nupkg
+# The packages folder can be ignored because of restore
+**/[Pp]ackages/*
+# except build/, which is used for packaging
+!**/[Pp]ackages/build/
+# Uncomment to ignore your NuGet packages and sources
+# nuget.exe
+*.snupkg
+
+## Entity Framework
+*.dbmdl
+*.mdf
+*.ldf
+
+## ASP.NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## DotNet CLI
+.project
+.dotnet
+*.props
+*.targets
+
+## Publish results
+**/[Pp]ublishProfiles/
+*.pubxml
+*.publishsettings
+
+# -----------------------------
+# JetBrains Rider specific
+# -----------------------------
+
+.idea/
+*.sln.iml
+
+# Rider caches
+.idea/.idea/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/libraries
+.idea/httpRequests/
+.idea/assetWizardSettings.xml
+
+# User-specific Rider data
+*.iws
+.idea/.name
+.idea/.idea/
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+
+# -----------------------------
+# OS-specific files
+# -----------------------------
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# -----------------------------
+# Optional: Rider + .NET temp folders
+# -----------------------------
+
+# JetBrains temp dirs
+.idea/.ideaIC/
+.idea/.ideaIU/
+
+# Rider local history
+.idea/localHistory/
+
+# .NET tool artifacts
+.vs/
+*.vscode/
+*.resharper/
+_ReSharper*/
+_ReSharper.Caches/
