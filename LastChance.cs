@@ -6,7 +6,7 @@ using AzubiDemo.HintsLogic;
 
 public class LastChance
 {
-    public static void Run(int computerNumber, int inputDifficulty)
+    public static void Run(int computerNumber, int inputDifficulty, int trieseUsed)
     {
         HintsInit allHints = new HintsInit();
         Random randomHints = new Random();
@@ -17,7 +17,8 @@ public class LastChance
         DifficultyInit difficulties = new DifficultyInit();
         Difficulty selectedDifficulty = difficulties.Difficulties[inputDifficulty];
         int tries = selectedDifficulty.Tries;
-        
+        int triesUsed = 0; 
+
         
         
         bool isValidInput;
@@ -36,12 +37,16 @@ public class LastChance
                 Thread.Sleep(200);
             }
         } while (!isValidInput);
+        
+        triesUsed++;
+
 
         if (playerNumber == computerNumber)
         {
             GlobalStatus.CurrentStatus = Status.Win_Running;
-            Win.Run(computerNumber, inputDifficulty);
+            Win.Run(computerNumber, inputDifficulty, triesUsed); 
         }
+
         else
         {
             GlobalStatus.CurrentStatus = Status.Lose_Running;

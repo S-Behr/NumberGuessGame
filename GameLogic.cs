@@ -21,6 +21,7 @@ public class GameLogic
         Console.WriteLine($"Test {triesRemaining}");
         bool isValidInput;
         int playerNumber; // Player Guess
+        int triesUsed = 0;
 
         do
         {
@@ -38,12 +39,15 @@ public class GameLogic
                 }
             } while (!isValidInput);
             
+            triesUsed++;
+
             if (playerNumber == computerNumber)
             {
                 GlobalStatus.CurrentStatus = Status.Win_Running;
-                Win.Run(computerNumber, inputDifficulty);
+                Win.Run(computerNumber, inputDifficulty, triesUsed); 
                 return;
             }
+
             else if (playerNumber > computerNumber && triesRemaining >= 2)
             {
                 Console.WriteLine("My number is smaller!");
@@ -64,7 +68,7 @@ public class GameLogic
         if (playerNumber != computerNumber)
         {
             GlobalStatus.CurrentStatus = Status.LastChance_Running;
-            LastChance.Run(computerNumber, inputDifficulty);
+            LastChance.Run(computerNumber, inputDifficulty, triesUsed);
             return;
         }
         

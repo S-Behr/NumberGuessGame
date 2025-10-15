@@ -32,7 +32,7 @@ public class Lose
             }
             else if (keyInfo.Key == ConsoleKey.N)
             {
-                Console.WriteLine("See you next time!");
+                Console.WriteLine($"See you next time {GlobalPlayer.Name}!");
                 Thread.Sleep(500);
                 GlobalStatus.CurrentStatus = Status.Finished;
                 Environment.Exit(0);
